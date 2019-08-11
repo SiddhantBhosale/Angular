@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 export class NumberService {
 
   constructor() { }
-  public checkPrime(a:number) {
+
+  public checkPrime(a:number): boolean {
     if (a===1 || a === 2) {
     return true;
   }

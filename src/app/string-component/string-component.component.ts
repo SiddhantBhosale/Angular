@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StringService } from '../string.service';
 
 @Component({
   selector: 'app-string-component',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StringComponentComponent implements OnInit {
 
-  constructor() { }
+  result: number;
+  constructor(stringServiceObj:StringService) {
+    this.result = stringServiceObj.countCapital("Hello World.");
+   }
 
   ngOnInit() {
   }
